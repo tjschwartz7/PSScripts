@@ -25,11 +25,10 @@ if($regex)
 }
 #We know that user + $iter is a valid username
 
-if($iter) {$password = $password + (ConvertTo-SecureString $iter -AsPlainText -Force)}
 $fullname = $fullname + $iter
 
 "Enter secure password:"
-$Password = Read-Host -AsSecureString
+$password = Read-Host -AsSecureString
 
 $user_params = @{
     Name = ($name+$iter)
