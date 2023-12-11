@@ -20,7 +20,7 @@ if($regex)
         #Iterate our iterator
         $iter = $iter + 1
         #Set regex equal to our pattern search of the local user base
-        $regex = (Get-LocalUser).Name -Contains ("User" + $iter)
+        $regex = (Get-LocalUser).Name -eq ("User" + $iter)
     }
 }
 #We know that user + $iter is a valid username
